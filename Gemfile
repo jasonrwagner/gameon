@@ -9,6 +9,7 @@ gem 'execjs'
 gem 'heroku'
 gem 'thin'
 gem 'taps'
+gem 'minitest'
 
 group :development, :test do
 

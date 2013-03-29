@@ -94,6 +94,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.21)
+    minitest (4.7.0)
     multi_json (1.7.2)
     mysql2 (0.3.11)
     netrc (0.7.7)
@@ -203,6 +204,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
+  minitest
   mysql2
   pg
   rails (= 3.2.9)
