@@ -10,13 +10,14 @@ gem 'heroku'
 gem 'thin'
 gem 'taps'
 gem 'minitest'
+gem 'rb-inotify'
 
 group :development, :test do
 
   gem 'mysql2'
   gem 'taps', :require => false # has an sqlite dependency, which heroku hates
   gem 'pg'
-  gem 'turn'
+  #gem 'turn'
   gem 'rspec-rails' #, "~> 2.8"
   gem 'capybara'
   gem 'guard-rspec'

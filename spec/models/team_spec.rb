@@ -1,5 +1,14 @@
 require 'spec_helper'
 
 describe Team do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  before(:each) do
+    @attr = { 
+      :name => "Example Team"
+    }
+  end
+
+   it "should create a new instance given valid attributes" do
+  	Team.create!(@attr)
+  end
 end
