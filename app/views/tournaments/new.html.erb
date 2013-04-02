@@ -1,0 +1,13 @@
+<h1>New</h1>
+
+<%= form_for(@tournament) do |f| %>
+
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+  <%= f.submit %>
+
+<% end %>
