@@ -1,0 +1,2 @@
+class RoundRobinController < ApplicationController
+end

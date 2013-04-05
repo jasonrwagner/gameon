@@ -8,7 +8,13 @@ describe Team do
     }
   end
 
-   it "should create a new instance given valid attributes" do
+
+  it "should create a new team" do
   	Team.create!(@attr)
   end
+
+  it "has a name" do
+  	team = Team.name
+  end
+
 end
