@@ -1,1 +1,11 @@
 <h1>teams</h1>
+
+<ul>
+ 
+    <% @team.each do |team| %>
+      <li>
+        <%= team.name %>
+      </li>
+    <% end %>
+
+</ul>
