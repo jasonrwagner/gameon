@@ -15,10 +15,13 @@ describe TeamsController do
 
 	describe "GET 'show'" do
 
-      before do
-        @team = Team.create(name: "Team One") 
-        visit team_path(@team)
+      before(:each) do
+        @team = FactoryGirl.create(:team)
       end
+#      before do
+#        @team = Team.create(name: "Team One") 
+#        visit team_path(@team)
+#      end
 
 
 
