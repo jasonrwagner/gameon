@@ -17,6 +17,10 @@ class TournamentsController < ApplicationController
   	    render :new
 	    end
   end
+
+  def show
+    @tournament = Tournament.find(params[:id])
+  end
 end
 
 

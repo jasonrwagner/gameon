@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
   end
 
   def create
-  	@team = Team.new(params[:id])
+  	@team = Team.new(params[:team])
 	if @team.save
   	  flash[:success] = "Added Team"
   	  redirect_to @team
