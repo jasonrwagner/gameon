@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402183111) do
+ActiveRecord::Schema.define(:version => 20130409200948) do
 
   create_table "matches", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -26,8 +26,9 @@ ActiveRecord::Schema.define(:version => 20130402183111) do
 
   create_table "tournaments", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "number_of_teams"
   end
 
 end

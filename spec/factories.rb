@@ -3,13 +3,15 @@ FactoryGirl.define do
   
   factory :tournament do
   
-    name     "Example Duel"
+    name              "Example Duel"
+    number_of_teams   "9"
 
   end
 
   factory :team do
   
-    name     "Dirty Roten Scoundrels"
+    name              "Dirty Rotten Scoundrels"
+
     
   end
 

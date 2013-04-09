@@ -4,13 +4,12 @@ describe TeamsController do
 
 	describe "GET 'index'" do
 
-		describe "list teams" do
-		  it "should list all teams" do
-		    get :index
-		    response.should be_success
-		  end
+	  describe "list teams" do
+	    it "should list all teams" do
+		  get :index
+		  response.should be_success
 		end
-
+	  end
 	end
 
 	describe "GET 'show'" do
@@ -22,8 +21,6 @@ describe TeamsController do
 #        @team = Team.create(name: "Team One") 
 #        visit team_path(@team)
 #      end
-
-
 
 	  describe "show individual team" do
 	  	it "displays a team" do
@@ -37,9 +34,6 @@ describe TeamsController do
 
 	  it "is successful" do
 	  	get :new
-	  end
-
-	  
+	  end	  
 	end
-
 end

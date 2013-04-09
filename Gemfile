@@ -23,6 +23,7 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'launchy'
   gem "factory_girl_rails"
+  gem 'webrat'
 end
 
 group :production do
