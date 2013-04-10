@@ -1,16 +1,20 @@
 <%= form_for(@tournament) do |f| %>
 
+<ul>
+  <li>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name %>
+  	</div>
+  </li>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :number_of_teams %><br />
-    <%= f.text_field :number_of_teams %>
-  </div>
+  <li>
+    <div class="field">
+      <%= f.label :number_of_teams %><br />
+      <%= f.text_field :number_of_teams %>
+  	</div>
+  </li>
 
   <%= f.submit %>
-
+</ul>
 <% end %>

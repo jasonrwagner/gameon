@@ -1,6 +1,10 @@
 require 'spec_helper'
 
+
+
 describe TournamentsController do
+
+  render_views
   
   describe "list all tournaments" do
 
@@ -22,6 +26,10 @@ describe TournamentsController do
 
 	  describe "GET 'new'" do
 
+      before(:each) do
+        @tournament = FactoryGirl.create(:tournament)
+      end
+
 	    it "redirects to tournaments new" do
 	  	  get :new
 		    response.should be_success
@@ -34,10 +42,11 @@ describe TournamentsController do
         it "has a field for tournament name" do
           get :new
           response.should have_selector("input[name='tournament[name]'][type='text']")
-          #it { should have_selector("name") }
         end
 
         it "has a field for number of teams" do
+          get :new
+          response.should have_selector("input[name='tournament[number_of_teams]'][type='text']")
         end
       end
 	  end
@@ -52,6 +61,11 @@ describe TournamentsController do
     it "shows a tournament" do
       get :show, :id => @tournament
       response.should be_success      
+    end
+
+    it "has fields to add team names" do
+      get :show, :id => @tournament
+      response.should redirect_to(teams_path)
     end
 
 
