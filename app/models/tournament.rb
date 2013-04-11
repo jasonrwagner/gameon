@@ -5,7 +5,9 @@ class Tournament < ActiveRecord::Base
 
   def teams_in_play
   	@teams_in_play = Tournament.last.number_of_teams
-  end 
+  end
+
+
 
 
 end

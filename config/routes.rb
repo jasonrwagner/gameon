@@ -1,9 +1,11 @@
 Gameon::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
-resources :tournaments
+resources :tournaments do
+  resources :teams
+end
 resources :round_robin
-resources :teams
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action

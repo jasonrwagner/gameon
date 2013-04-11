@@ -1,12 +1,13 @@
 require 'spec_helper'
 
+
 describe TeamsController do
 
 	describe "GET 'index'" do
 
 	  describe "list teams" do
 	    it "should list all teams" do
-		  get :index
+		  get :index 
 		  response.should be_success
 		end
 	  end
@@ -15,6 +16,7 @@ describe TeamsController do
 	describe "GET 'show'" do
 
       before(:each) do
+      	@tournament = FactoryGirl.create(:tournament)
         @team = FactoryGirl.create(:team)
       end
 #      before do
