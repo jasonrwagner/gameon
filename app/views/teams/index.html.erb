@@ -1,11 +1,17 @@
 <h1>teams</h1>
-
+    
   <ul>
-    <% @teams.each do |team| %>
+    <% @teams_in_play_list.each do |team| %>
       <li>
         <%= team.name %>
       </li>
-    <% end %>
 
+    <% end %>
   </ul>
-  <%= link_to 'Add another Team', new_tournament_team_path(@tournament) %>
+
+  <% if @tournament.teams.count < @tournament.number_of_teams %>
+    <%= link_to 'Add another Team', new_tournament_team_path(@tournament) %>
+  <% else %>
+
+  <% end %>
+

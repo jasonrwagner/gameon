@@ -7,6 +7,10 @@ class Tournament < ActiveRecord::Base
   	@teams_in_play = Tournament.last.number_of_teams
   end
 
+  def teams_in_play_list
+  	@teams_in_play_list = Tournament.find_by_id(29).teams
+  end
+
 
 
 

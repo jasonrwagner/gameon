@@ -59,15 +59,16 @@ describe TournamentsController do
       Tournament.stub!(:find, @tournament.id).and_return(@tournament)
     end
 
-#    it "shows a tournament" do
-#      get :show, :id => @tournament
-#      response.should be_success      
-#    end
+    it "shows a tournament" do
+      get :show, :id => @tournament.id
+      response.should be_success      
+    end
 
-#    it "has a field to add team name" do
-#      get :show, :id => @tournament
-#      response.should redirect_to(teams_path)
-#    end
+    it "has a field to add team name" do
+      get :show, :id => @tournament.id
+      #response.should redirect_to(new_teams_tournament.id_tournaments_path)
+      #(tournaments_tournament.id_teams_new_path)
+    end
 
 
   end
