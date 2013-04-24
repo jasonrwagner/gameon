@@ -2,9 +2,8 @@ class TeamsController < ApplicationController
 
   def index
     @tournament = Tournament.find(params[:tournament_id])   
-  	@teams_count = Tournament.find(params[:tournament_id]).teams_in_play
-    @teams_in_play_list = Tournament.find(params[:tournament_id]).teams_in_play_list
-   # @teams = Team.all
+  	@teams_count = @tournament.number_of_teams_in_play
+    @teams_in_play_list = @tournament.teams.all
   end
 
   def show
