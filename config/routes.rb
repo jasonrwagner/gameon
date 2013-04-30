@@ -3,8 +3,17 @@ Gameon::Application.routes.draw do
   # first created -> highest priority.
 resources :tournaments do
   resources :teams
+  resources :round_robin do
+    collection do
+      get 'populate'
+    end
+  end
 end
-resources :round_robin
+#resources :round_robin do
+#  collection do
+#    get 'populate'
+#  end
+#end
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
