@@ -1,0 +1,9 @@
+<%= form_for (@round_robin) do |f| %>
+
+  <div class="field">
+  	<%= f.label :teams_in_play %><br />
+  	<%= f.text_field :teams_in_play %>
+  </div>
+  <%= f.submit %>
+
+<% end %>

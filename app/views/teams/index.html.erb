@@ -13,5 +13,7 @@
     <%= link_to 'Add another Team', new_tournament_team_path(@tournament) %>
   <% else %>
 
+    <%= link_to 'All Good?', tournament_round_robins_path(@tournament) %>
+
   <% end %>
 

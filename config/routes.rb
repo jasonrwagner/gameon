@@ -3,16 +3,16 @@ Gameon::Application.routes.draw do
   # first created -> highest priority.
 resources :tournaments do
   resources :teams
-  resources :round_robin do
-    collection do
-      get 'populate'
-    end
-  end
+  resources :round_robins #do
+ #   resources :teams do
+ #     get 'index'
+ #   end
+
+  #end
 end
-#resources :round_robin do
-#  collection do
-#    get 'populate'
-#  end
+
+#resources :round_robins do
+ # resources :teams
 #end
 
   # Sample of regular route:
@@ -22,7 +22,8 @@ end
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
-
+#match '/round_robins/create' => 'round_robins#create'
+#match '/tournament_round_robins' => 'round_robins#show'
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

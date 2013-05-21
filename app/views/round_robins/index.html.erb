@@ -1,0 +1,13 @@
+
+
+
+<% @current_round_robin_teams.map do |team| %>
+      <li>
+        <%= team.name %>
+      </li>
+
+<% end %>
+<%= link_to "Create the Round Robin", tournament_round_robins_path(@tournament, @team),:method => "post" %>
+
+
+
