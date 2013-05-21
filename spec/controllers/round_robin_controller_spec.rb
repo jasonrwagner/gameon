@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RoundRobinController do
+describe RoundRobinsController do
 
 	describe "GET 'index'" do
 
