@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521215409) do
+ActiveRecord::Schema.define(:version => 20130522190020) do
 
   create_table "matches", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20130521215409) do
   create_table "round_robins", :force => true do |t|
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
-    t.string   "teams_in_play"
+    t.text     "teams_in_play"
   end
 
   create_table "teams", :force => true do |t|
