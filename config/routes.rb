@@ -11,6 +11,7 @@ resources :tournaments do
   #end
 end
 
+root :to => 'tournaments#index'
 #resources :round_robins do
  # resources :teams
 #end
