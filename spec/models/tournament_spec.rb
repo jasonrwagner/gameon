@@ -19,7 +19,9 @@ describe Tournament do
   	number_of_teams.should be_valid
   end
 
-
+  describe "should have a name" do
+    Tournament.name.include?("Example Tournament")
+  end
 
 
 end
