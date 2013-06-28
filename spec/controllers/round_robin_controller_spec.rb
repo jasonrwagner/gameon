@@ -9,4 +9,11 @@ describe RoundRobinsController do
 		end
 	end
 
+	describe "GET 'show'" do
+
+		it "shows the schedule for the round robin" do
+			
+		end	
+	end	
+
 end

@@ -7,7 +7,7 @@
       </li>
 
 <% end %>
-<%= link_to "Create the Round Robin", tournament_round_robins_path(@tournament, @team),:method => "post" %>
+<%= link_to "Create the Round Robin", tournament_round_robins_path(@tournament, @team,  :teams_in_play => @current_round_robin_teams),:method => "post" %>
 
 
 
