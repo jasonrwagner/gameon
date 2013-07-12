@@ -11,8 +11,6 @@ class RoundRobinsController < ApplicationController
 
   end  
 
-
-
   def index
   	 #@tournament = Tournament.find(params[:tournament_id])
   	 #@round_robin_teams = @tournament.teams.all
@@ -33,6 +31,9 @@ class RoundRobinsController < ApplicationController
     @round_robin = RoundRobin.find(params[:id])
     @current_round_robin_teams =  @round_robin.teams_in_play.map {|team| Team.find(team.to_i) }
     #@round_robin_teams = @round_robin.teams.all
+    @round_robin_schedule = @round_robin.schedule(@tournament.id)
+    puts params[:number_of_teams]
+  
 
   end
 
@@ -42,6 +43,7 @@ class RoundRobinsController < ApplicationController
     puts "hello"
     puts params[:teams_in_play]
     puts params[:round_robin]
+    puts params[:number_of_teams]
     @tournament = Tournament.find(params[:tournament_id])
     #populate
     @round_robin = RoundRobin.new(params[:round_robin])
