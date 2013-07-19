@@ -33,6 +33,7 @@ class RoundRobinsController < ApplicationController
     #@round_robin_teams = @round_robin.teams.all
     @round_robin_schedule = @round_robin.schedule(@tournament.id)
     puts params[:number_of_teams]
+#    @round_robin_schedule_generator = @round_robin.generator
   
 
   end
