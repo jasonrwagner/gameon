@@ -18,24 +18,26 @@ class RoundRobin < ActiveRecord::Base
     #scheduled_teams.teams_in_play = params [:teams_in_play].to_a
     
     number_of_teams = Tournament.find(tournament_id).number_of_teams
-    teams = Tournament.find(tournament_id), RoundRobin.find(id)
-    puts "#{number_of_teams}help"
-    puts "#{teams}"
+    teams = Tournament.find(tournament_id).teams
+    #teams = Tournament.find(tournament_id), RoundRobin.find(id)
+    puts "#{number_of_teams}num_of_teams_model"
+    puts "#{teams_in_play}teams_in_play_model"
+    puts "#{teams}teams_model"
 
 
 
-    row1 = (1..number_of_teams).map do |home_team|
-        puts home_team
+    row1 = (1..number_of_teams).map
 
-    end
-
-    row2 = (1..number_of_teams).map do |away_team|
-        puts away_team
-    end 
-
-    a = teams_in_play.permutation(2).to_a
-      puts a.inspect
     
+    row2 = (number_of_teams.downto(1)).map 
+
+    pairings = teams_in_play.permutation(2).to_a
+      #puts pairings.inspect
+
+
+    result = {:row1 => row1, :row2 => row2, :pairings => pairings, :teams => teams}
+
+
   end
   
  

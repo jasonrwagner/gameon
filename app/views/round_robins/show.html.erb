@@ -9,10 +9,47 @@
     <% end %>
 
   </ul>
+  <%= params.inspect %>
+</br>
+</br>
+    <% @round_robin_schedule[:pairings].each do |pair| %>
+      <% pair.each do |p| %>
+        <li>
+        <%= p %>
+        </li>
+
+      <% end %>
+
+
+    <% end %>
+    <% @round_robin_schedule[:teams].each do |team_names| %>
+        <li>
+        <%= team_names.name %>
+        </li>
+
+    <% end %>
+    <% @round_robin_schedule[:row1].each do |home| %>
+        <li>
+        <%= home %>
+        </li>
+
+    <% end %>
+    <% @round_robin_schedule[:row2].each do |away| %>
+        <li>
+        <%= away %>
+        </li>
+
+    <% end %>
+
+
+ 
+</br>
+</br>
 
 
 
   <%= link_to "Make Schedule" %>
+
 
   <p>show</p>
 
